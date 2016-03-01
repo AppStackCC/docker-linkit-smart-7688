@@ -28,3 +28,9 @@ RUN make download
 #RUN make menuconfig
 #RUN make V=99
 #RUN make -j 2 V=99
+
+## Linkit Smart SDK
+WORKDIR /
+RUN wget http://download.labs.mediatek.com/OpenWrt-SDK-ramips-mt7688_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64.tar.bz2
+RUN tar xjf OpenWrt-SDK-ramips-mt7688_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64.tar.bz2 -C /openwrt-sdk
+RUN rm OpenWrt-SDK-ramips-mt7688_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64.tar.bz2
